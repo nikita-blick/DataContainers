@@ -410,3 +410,4 @@ void main()
 	measure_performance("Среднее-арифметическо элемнтов дерева: ", &Tree::avg, tree);
 	measure_performance("Глубина дерева: ", &Tree::depth, tree);
 #endif // PERFORMANCE_CHECK
+}
