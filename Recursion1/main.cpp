@@ -3,6 +3,7 @@ using namespace std;
 
 void elevator(int floor);
 int Factorial(int n);
+double Power(double a, int n);
 
 void main()
 {
@@ -31,4 +32,10 @@ int Factorial(int n)
 		return 1;
 	else
 		return n * Factorial(n - 1);
+}
+double Power(double a, int n)
+{
+	if (n == 0) return 1;
+	if (n > 0) return a * Power(a, n - 1);
+	return 1 / Power(a, -n);
 }
