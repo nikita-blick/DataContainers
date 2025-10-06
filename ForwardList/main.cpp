@@ -176,6 +176,7 @@ public:
 	}
 	int& operator[](int index)
 	{
+		if (index >= size)throw std::out_of_range("ForwardList: Out of range exception");
 		Element* Temp = Head;
 		for (int i = 0; i < index; i++)Temp = Temp->pNext;
 		return Temp->Data;
@@ -413,7 +414,7 @@ void main()
 	//system("PAUSE");
 	try
 	{
-		for (int i = 0; i < list.get_size(); i++)
+		for (int i = 0; i < list.get_size() * 2000; i++)
 			cout << list[i] << tab;
 		cout << endl;
     }
